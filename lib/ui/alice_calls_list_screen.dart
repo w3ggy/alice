@@ -23,7 +23,6 @@ class _AliceCallsListScreenState extends State<AliceCallsListScreen> {
   _AliceCallsListScreenState() {
     _menuItems.add(AliceMenuItem("Delete", Icons.delete));
     _menuItems.add(AliceMenuItem("Stats", Icons.insert_chart));
-    _menuItems.add(AliceMenuItem("Save", Icons.save));
   }
 
   @override
@@ -62,9 +61,6 @@ class _AliceCallsListScreenState extends State<AliceCallsListScreen> {
     }
     if (menuItem.title == "Stats") {
       _showStatsScreen();
-    }
-    if (menuItem.title == "Save") {
-      _saveToFile();
     }
   }
 
@@ -145,9 +141,4 @@ class _AliceCallsListScreenState extends State<AliceCallsListScreen> {
         MaterialPageRoute(
             builder: (context) => AliceStatsScreen(widget._aliceCore.calls)));
   }
-
-  void _saveToFile() async {
-    widget._aliceCore.saveHttpRequests(context);
-  }
-
 }
