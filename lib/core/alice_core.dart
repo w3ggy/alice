@@ -1,12 +1,13 @@
-import 'package:alice/model/alice_http_call.dart';
 import 'package:alice/model/alice_http_error.dart';
-import 'package:alice/model/alice_http_response.dart';
 import 'package:alice/ui/alice_calls_list_screen.dart';
+import 'package:alice/model/alice_http_call.dart';
+import 'package:alice/model/alice_http_response.dart';
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 
 class AliceCore {
   GlobalKey<NavigatorState> _navigatorKey;
+
   List<AliceHttpCall> calls;
   PublishSubject<int> changesSubject;
   PublishSubject<AliceHttpCall> callUpdateSubject;
